@@ -1,0 +1,7 @@
+SINTAXIS MARKDOWN
+
+https://markdown.es/sintaxis-markdown/
+
+CÓMO INSPECCIONAR HTML
+
+https://blog.hubspot.es/website/framework-desarrollo-web#:~:text=abrir%20Web%20Inspector%3A-,Haz%20clic%20derecho%20en%20cualquier%20parte%20de%20la%20p%C3%A1gina%20y,atajo%20comando%2Dopci%C3%B3n%2DI.

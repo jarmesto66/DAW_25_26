@@ -1,0 +1,2 @@
+https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting
+https://desarrolloweb.com/manuales/manual-javascript.html

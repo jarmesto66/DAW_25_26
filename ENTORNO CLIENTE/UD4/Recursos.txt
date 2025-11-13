@@ -1,0 +1,15 @@
+
+Introducción a GIT 
+https://www.youtube.com/watch?v=ANF1X42_ae4
+
+
+Creando un repositorio 
+https://www.youtube.com/watch?v=qk-GWtcdQek&t=711s
+
+
+Subir a GITHUB
+https://www.youtube.com/watch?v=0UlqvTJzOL4
+
+
+Github en VSC (forma gráfica) 
+https://www.youtube.com/watch?v=ngow7sPfSDQ

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cambiar color de fondo</title>
+</head>
+<body>
+
+    <script>
+    // Pedimos al usuario qué color de fondo prefiere
+    var opcion = window.prompt("¿Qué color de fondo prefieres? (R = rojo, V = verde, A = azul)");
+
+    // Convertimos la respuesta a mayúsculas por si escribe en minúsculas
+    opcion = opcion.toUpperCase();
+
+    // Cambiamos el color de fondo según la opción elegida
+    if (opcion === "R") {
+        document.body.style.backgroundColor = "#FF0000"; // rojo
+    } else if (opcion === "V") {
+        document.body.style.backgroundColor = "#00FF00"; // verde
+    } else if (opcion === "A") {
+        document.body.style.backgroundColor = "#0000FF"; // azul
+    } else {
+        // Si elige otra cosa, color gris por defecto
+        document.body.style.backgroundColor = "#CCCCCC";
+        window.alert("Opción no válida.");
+    }
+    </script>
+
+</body>
+</html>

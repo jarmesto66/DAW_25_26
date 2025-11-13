@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contar letras 'a'</title>
+</head>
+<body>
+
+<script>
+  // Pedimos al usuario que introduzca una cadena de texto
+  var texto = window.prompt("Introduce una cadena de texto:");
+
+  // Contamos cuántas letras 'a' contiene (tanto mayúsculas como minúsculas)
+  var contador = 0;
+  for (var i = 0; i < texto.length; i++) {
+    if (texto.charAt(i) === 'a') {
+      contador++;
+    }
+  }
+
+  // Mostramos el resultado en una ventana emergente
+  window.alert("La cadena contiene " + contador + " letras 'a'.");
+</script>
+
+</body>
+</html>

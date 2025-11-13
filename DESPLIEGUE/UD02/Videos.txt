@@ -1,0 +1,6 @@
+VÍDEO: Herramientas de diagnóstico para DNS: nslookup, dig y host
+https://www.youtube.com/watch?v=aAUahbLogKc
+
+
+VÍDEO: FUNCIONAMIENTO DNS 
+https://youtu.be/5FYsIDXFrAc?si=F5BH-0o5aqhMzijF

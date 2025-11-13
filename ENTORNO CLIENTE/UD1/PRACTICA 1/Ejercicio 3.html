@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contar letras 'a' y 'A'</title>
+</head>
+<body>
+
+    <script>
+    // Pedimos al usuario que introduzca una cadena de texto
+    var texto = window.prompt("Introduce una cadena de texto:");
+
+    // Inicializamos el contador
+    var contador = 0;
+
+    // Recorremos todos los caracteres del texto
+    for (var i = 0; i < texto.length; i++) {
+        var caracter = texto.charAt(i);
+        
+        // Contamos tanto 'a' como 'A'
+        if (caracter === 'a' || caracter === 'A') {
+        contador++;
+        }
+    }
+
+    // Mostramos el resultado en una ventana emergente
+    window.alert("La cadena contiene " + contador + " letras 'a' o 'A'.");
+    </script>
+
+</body>
+</html>

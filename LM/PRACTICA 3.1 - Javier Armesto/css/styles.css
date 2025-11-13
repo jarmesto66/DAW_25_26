@@ -1,0 +1,55 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menu {
+    display: flex; /* Usamos flexbox para el menú */
+    align-items: stretch; /* Alinea los elementos para que ocupen toda la altura del menú */
+    background-color: #333;
+    height: 60px;
+}
+
+.menu a {
+    display: flex; /* Usamos flexbox para centrar el texto */
+    justify-content: flex-end; /* Alinea el texto a la derecha */
+    align-items: center; /* Centra verticalmente */
+    padding: 0 20px;
+    /*justify-content: center; /* Centra horizontalmente */
+    text-decoration: none; /*Quita el subrayado de los enlaces*/
+    color: turquoise; /*Color del texto de los enlaces*/
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: lightgray;
+    color: darkgreen;
+    text-decoration: none; /*Quita el subrayado al pasar el ratón*/
+}
+
+.menu .logo {
+    display: flex; /* Usamos flexbox para centrar el texto */
+    align-items: center; /* Centra verticalmente */
+    font-size: 20px;
+    color: turquoise;
+    font-weight: bold;
+    padding: 0 20px;
+    margin-right: auto; /* Empuja los enlaces a la derecha */
+}
+
+.rotulo
+{
+    background-color: #1ac5a9;
+    color: black;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+}
+
+.bajoRotulo
+{
+    background-color: #88ccec;
+    color: black;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 0 0 15px 15px;
+}

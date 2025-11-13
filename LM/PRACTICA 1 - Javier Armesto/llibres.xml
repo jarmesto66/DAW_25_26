@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<cataleg>
+    <llibre id="131">
+        <titol>Tirant Lo Blanc</titol>
+        <ubicacio>1A</ubicacio>
+    </llibre>
+    <llibre id="132">
+        <titol>Harry Potter</titol>
+        <ubicacio>2B</ubicacio>
+    </llibre>
+    <llibre id="133">
+        <titol>Star Wars</titol>
+        <ubicacio>3C</ubicacio>
+    </llibre>
+</cataleg>
+<cataleg>
+    <ubicacio>1A</ubicacio>
+    <nom>Ficció</nom>
+    <ubicacio>2B</ubicacio>
+    <nom>Fantasia</nom>
+    <ubicacio>3C</ubicacio>
+    <nom>Ciencia Ficció</nom>
+</cataleg>
