@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blanchedalmond;
+}
+
+body {
+    background-image: url('../images/background_food.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+article {
+    flex:1;
+}
+
+nav {
+    margin-top: 60px; /* Altura del menú fijo */
+}
+
+input, textarea, button {
+    padding: 0.7rem;
+    border: 1px solid #dddddd67;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: black;
+}
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #a93226;
+}
+
+.aviso{
+    color: blanchedalmond;
+    text-align: left;
+    padding: 10px;
+    font-size: x-large;
+    
+}
+
+.dividida {
+    display: flex;
+
+}
+
+.menu {
+    display: flex;
+    align-items: stretch;
+    opacity: 0.8;
+    background-color: saddlebrown;
+    height: 60px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.menu a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(19, 13, 13);
+    padding: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.menu a:hover {
+    background-color: peru;
+    color: white;
+    text-decoration: none;
+}
+
+.menu .logo {
+    display: flex; /* Usamos flexbox para centrar el texto */
+    align-items: center; /* Centra verticalmente */
+    font-size: 20px;
+    color: tomato;
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 0 20px;
+    margin-right: auto; /* Empuja los enlaces a la derecha */
+}
+
+.menu a.activa {
+    background-color: rgb(235, 140, 31);
+    color: rgb(77, 36, 12);
+    text-decoration: none;
+}
+
+.boton {
+    background-color: sienna;
+    border: none;
+    color: blanchedalmond;
+    padding: 5px 10px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.resenyaform {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.reseñas {
+    margin-top: 2rem;
+}
+
+.reseña {
+    background: peru;
+    color: #180505;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #c0392b;
+}
+
+.container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #180505;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+.encabezah2 {
+    margin-top: 20px;
+}
+
+.flotar_derecha {
+    inline-size: none;
+    padding: 10%;
+    float: left;
+    margin: 0 0 10px 10px;
+}
+
+.mapa {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-container {
+    width: 100%;              /* ancho del contenedor */
+    overflow: hidden;         /* oculta las imágenes que salen del marco */
+    background: #f5f5f5;
+  }
+
+.scroll-items {
+    display: flex;            /* pone las imágenes en fila */
+    animation: scroll 20s linear infinite;  /* animación continua */
+  }
+
+.scroll-container img {
+  height: 500px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  margin-right: 10px; /* Espacio entre imágenes */
+}
+  
+.cuadricula-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /* Tres columnas de igual tamaño */
+    grid-template-rows: repeat(2,1fr); /* Dos filas de igual tamaño */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 15px; /* Espacio interno entre el borde y las imágenes */
+    border-radius: 12px;  /* Bordes redondeados para el contenedor */
+    background-color: rgba(160, 82, 45, 0.5); /* Fondo semitransparente */
+}
+
+.cuadricula-imagenes img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* La altura se ajusta automáticamente */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+.cuadricula-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+  padding: 15px;
+  background-color: rgba(160, 82, 45, 0.5);
+  border-radius: 12px;
+}
+
+.plato {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.plato img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.plato img:hover {
+  transform: scale(1.05);
+}
+
+.platogrande img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.platogrande img:hover {
+  transform: scale(1.05);
+}
+
+.plato p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 10px;
+  color: blanchedalmond;
+}
+
+/* Hace que el plato "grande" ocupe dos filas */
+.platogrande {
+  grid-row: span 2;
+}
+
+/* --- Versión responsive --- */
+@media (max-width: 900px) {
+  .cuadricula-menu {
+    grid-template-columns: repeat(2, 1fr); /* dos fotos por fila */
+  }
+
+  .platogrande {
+    grid-row: span 1; /* el plato grande ocupa solo una fila */
+  }
+}
+
+@media (max-width: 600px) {
+  .cuadricula-menu {
+    grid-template-columns: 1fr; /* una foto por fila */
+  }
+}
+
+
+
+  .menu a {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
