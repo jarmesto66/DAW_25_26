@@ -19,6 +19,22 @@ nav {
     margin-top: 60px; /* Altura del menú fijo */
 }
 
+footer {
+    background-color: saddlebrown;
+    color: blanchedalmond;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.8;
+    font-size: medium;
+    /* Footer no tapa el contenido al llegar al final de scroll*/
+    box-sizing: border-box;
+    z-index: 9998;
+
+}
+
 input, textarea, button {
     padding: 0.7rem;
     border: 1px solid #dddddd67;
@@ -42,12 +58,30 @@ button:hover {
     background: #a93226;
 }
 
+h1 {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+p {
+  font-size: 1rem;
+  margin: 10px 20px;
+}
+
+form {
+  margin: 20px;
+}
+
+footer p {
+  font-size: 0.8rem;
+  margin: 0px 0px 5px 0px;
+}
+
 .aviso{
     color: blanchedalmond;
     text-align: left;
     padding: 10px;
-    font-size: x-large;
-    
+    font-size: x-large;    
 }
 
 .dividida {
@@ -244,6 +278,30 @@ button:hover {
   color: blanchedalmond;
 }
 
+.alergenos img {
+  margin: 0 5px;
+  height: 25px;
+  width: auto;
+  margin: 10px 0 0 0;
+  padding: auto;
+  align-items: center;
+}
+
+.atencion {
+  color: greenyellow;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 10px;
+  text-align: center;
+  margin: 10px 20px 20px 20px;
+}
+
+.atencion a {
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* Hace que el plato "grande" ocupe dos filas */
 .platogrande {
   grid-row: span 2;
@@ -278,8 +336,3 @@ button:hover {
     text-align: center;
     margin-bottom: 10px;
   }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-}
