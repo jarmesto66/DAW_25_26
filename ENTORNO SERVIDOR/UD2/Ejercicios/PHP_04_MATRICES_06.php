@@ -47,7 +47,7 @@
             echo "<h1>El ganador es el Jugador 2</h1>";
         } else {
             echo "<h1>El juego termina en empate</h1>";
-        }
+        }   
     ?>
     
 </body>
