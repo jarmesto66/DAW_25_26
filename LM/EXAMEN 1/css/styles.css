@@ -1,3 +1,6 @@
+/* ===== RESET Y CONFIGURACIÓN BASE ===== */
+
+/* Reset universal: elimina márgenes y padding por defecto de todos los elementos */
 * {
     margin: 0;
     padding: 0;
@@ -5,59 +8,69 @@
     color: blanchedalmond;
 }
 
+/* Fondo de página con imagen fija que cubre toda la pantalla */
 body {
     background-image: url('../images/background_food.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
 
+/* ===== ESTRUCTURA PRINCIPAL DE LAYOUT ===== */
+/* Sistema flexible para artículos que se expanden según el contenido disponible*/
 article {
     flex:1;
 }
 
+/* Margen superior para compensar el menú fijo y evitar que lo cubra */
 nav {
-    margin-top: 60px; /* Altura del menú fijo */
+    margin-top: 60px; /* Altura del menú fijo*/
 }
 
+/* Pie de página fijo en la parte inferior de la pantalla */
 footer {
     background-color: saddlebrown;
     color: blanchedalmond;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: fixed; /* Siempre visible en la parte inferior */
     bottom: 0;
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.8; /* Transparencia para ver el fondo detrás */
     font-size: medium;
-    /* Footer no tapa el contenido al llegar al final de scroll*/
     box-sizing: border-box;
-    z-index: 9998;
+    z-index: 9998; /* Por debajo del menú pero encima del contenido */
 
 }
 
+/* ===== COMPONENTES DE FORMULARIO ===== */
+/* Estilos base para inputs, textareas y botones */
 input, textarea, button {
     padding: 0.7rem;
-    border: 1px solid #dddddd67;
+    border: 1px solid #dddddd67; /* Borde semitransparente */
     border-radius: 5px;
     font-size: 1rem;
-    color: black;
-}
-textarea {
-    min-height: 80px;
-    resize: vertical;
+    color: black; /* Contraste con el fondo oscuro */
 }
 
+/* Textarea con altura mínima y redimensionado controlado */
+textarea {
+    min-height: 80px; /* Altura inicial mínima */
+    resize: vertical; /* Solo permite cambiar altura, no anchura */
+}
+
+/* Botones con efecto hover y transición suave */
 button {
     background: #c0392b;
     color: #fff;
     border: none;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s; /* Transición suave al cambiar color */
 }
 button:hover {
-    background: #a93226;
+    background: #a93226; /* Rojo más oscuro al pasar el ratón */
 }
 
+/* ===== TIPOGRAFÍA Y ESPACIADO ===== */
 h1 {
   font-size: 1.5rem;
   margin-left: 20px;
@@ -85,33 +98,43 @@ summary {
 
 /*--------------------------------------------------------------------------------*/
 
-.aviso{
-    color: blanchedalmond;
-    text-align: left;
-    padding: 10px;
-    font-size: x-large;    
+.mensaje-atencion {
+  
+  background-color: #180505;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+  margin: 10px 20px 20px 20px;
 }
 
-.dividida {
-    display: flex;
+.mensaje-atencion a {
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+.layout-dividido {
+    display: flex;
 }
 
 /*--------------------------------------------------------------------------------*/
 
+/* ===== SISTEMA DE NAVEGACIÓN ===== */
+/* Menú de navegación fijo en la parte superior */
 .menu {
     display: flex;
     align-items: stretch;
     opacity: 0.8;
     background-color: saddlebrown;
-    height: 60px;
+    height: 60px; /* ALTURA FIJA - importante para los márgenes */
     margin: auto;
-    position: fixed;
+    position: fixed; /* Fijo en la parte superior */
     top: 0;
     width: 100%;
     z-index: 9999;
 }
 
+/* Enlaces del menú con efecto hover */
 .menu a {
     display: flex;
     justify-content: flex-end;
@@ -123,23 +146,25 @@ summary {
     font-size: 1rem;
 }
 
+/* Cambio de color al interactuar */
 .menu a:hover {
     background-color: peru;
     color: white;
     text-decoration: none;
 }
 
-.menu .logo {
-    display: flex; /* Usamos flexbox para centrar el texto */
-    align-items: center; /* Centra verticalmente */
-    font-size: 20px;
-    color: tomato;
-    font-weight: bold;
+/* Logo del menú con posicionamiento especial */
+.menu-logo {
+    display: flex;
+    align-items: center;
     font-size: xx-large;
     padding: 0 20px;
-    margin-right: auto; /* Empuja los enlaces a la derecha */
+    margin-right: auto; /* MAGIA FLEXBOX: empuja todo lo demás a la derecha */
+    color: tomato;
+    font-weight: bold;
 }
 
+/* Estado activo para la página actual */
 .menu a.activa {
     background-color: rgb(235, 140, 31);
     color: rgb(77, 36, 12);
@@ -147,8 +172,6 @@ summary {
 }
 
 /*--------------------------------------------------------------------------------*/
-
-
 
 .resenyaform {
     display: flex;
@@ -170,6 +193,7 @@ summary {
     border-left: 4px solid #c0392b;
 }
 
+/* Botón personalizado con esquinas redondeadas */
 .boton {
     background-color: sienna;
     border: none;
@@ -182,33 +206,27 @@ summary {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 12px; /* Esquinas muy redondeadas */
 }
 
 .boton:hover {
-    background-color: chocolate;
+    background-color: chocolate; /* Efecto interactivo */
     color: white;
 }
 
-.container {
-      max-width: 600px;
-      margin: 2rem auto;
+/* Contenedor de formularios con sombra y máximo ancho */
+.contenedor-formulario {
+      max-width: 600px; /* ANCHO MÁXIMO para legibilidad */
+      margin: 2rem auto; /* Centrado con margen vertical */
       background: #180505;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Sombra sutil */
       padding: 2rem;
       box-sizing: border-box;
     }
 
 .encabezah2 {
     margin-top: 20px;
-}
-
-.flotar_derecha {
-    inline-size: none;
-    padding: 10%;
-    float: left;
-    margin: 0 0 10px 10px;
 }
 
 .mapa {
@@ -219,23 +237,7 @@ summary {
     justify-content: center;
 }
 
-.scroll-container {
-    width: 100%;              /* ancho del contenedor */
-    overflow: hidden;         /* oculta las imágenes que salen del marco */
-    background: #f5f5f5;
-  }
-
-.scroll-items {
-    display: flex;            /* pone las imágenes en fila */
-    animation: scroll 20s linear infinite;  /* animación continua */
-  }
-
-.scroll-container img {
-  height: 500px; /* Altura fija para las imágenes */
-  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-  margin-right: 10px; /* Espacio entre imágenes */
-}
-  
+/* GALERÍA DE IMÁGENES - Grid */
 .cuadricula-imagenes {
     display: grid;
     grid-template-columns: repeat(3,1fr); /* Tres columnas de igual tamaño */
@@ -252,21 +254,16 @@ summary {
     border-radius: 8px; /* Bordes redondeados para las imágenes */
 }
 
+/* CUADRÍCULA DEL MENÚ - Sistema Grid para organización de platos */
 .cuadricula-menu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 24px; /* Espacio entre elementos */
   padding: 16px;
   max-width: 1200px;
-  margin: 0 auto;
-  background-color: rgba(160, 82, 45, 0.5);
+  margin: 0 auto; /* Centrado horizontal */
+  background-color: rgba(160, 82, 45, 0.5); /* Fondo semitransparente */
   border-radius: 12px;
-}
-
-.logo {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 .plato {
@@ -276,19 +273,21 @@ summary {
   text-align: center;
 }
 
+/* Efectos hover en imágenes de platos */
 .plato img {
   width: 100%;
   border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
 }
 
 .plato img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05); /* Zoom suave al 105% */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra al interactuar */
 }
 
+/* Plato especial que ocupa más espacio */
 .platogrande {
-  grid-row: span 2; /* el plato grande ocupa dos filas */
+  grid-row: span 2; /* El plato vertical ocupa dos filas */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,7 +302,6 @@ summary {
 }
 
 .alergenos img {
-  margin: 0 5px;
   height: 25px;
   width: auto;
   margin: 10px 0 0 0;
@@ -311,26 +309,12 @@ summary {
   align-items: center;
 }
 
-.atencion {
-  
-  background-color: #180505;
-  font-size: 1rem;
-  line-height: 1.4;
-  margin-top: 10px;
-  text-align: center;
-  margin: 10px 20px 20px 20px;
-}
+/* ===== DISEÑO RESPONSIVE ===== */
 
-.atencion a {
-  color: orange;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* --- Versión responsive --- */
+/* TABLETS: 901px a 600px */
 @media (max-width: 900px) {
   .cuadricula-menu {
-    grid-template-columns: repeat(2, 1fr); /* dos fotos por fila */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   }
 
   .cuadricula-imagenes {
@@ -341,15 +325,32 @@ summary {
   .platogrande {
     grid-row: span 1; /* el plato grande ocupa solo una fila */
   }
+
+  .menu a { /* Ajuste del tamaño de fuente */
+    font-size: 0.8rem;
+  }
+
+  .menu-logo { /* Ajuste del tamaño del logo */
+    font-size: large;
+  }
 }
 
+/* MÓVILES: menos de 600px */
 @media (max-width: 600px) {
   .cuadricula-menu {
-    grid-template-columns: 1fr; /* una foto por fila */
+    grid-template-columns: 1fr; /* una columna apila vertical */
   }
   
   .cuadricula-imagenes {
     grid-template-columns: 1fr; /* Una columna de igual tamaño */
-    grid-template-rows: auto; /* Filas automáticas */
+    grid-template-rows: auto; /* Filas automáticas según contenido*/
+  }
+
+  .menu a {
+    font-size: 0.6rem; /* Se reduce el tamaño de fuente */
+  }
+
+  .menu-logo {
+    font-size: small; /* Se reduce el tamaño del logo */
   }
 }
