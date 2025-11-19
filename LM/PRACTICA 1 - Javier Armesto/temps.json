@@ -1,34 +1,42 @@
 {
-  "coord": { "lon": 39.47, "lat": -0.33 },
-  "weather": [
-    {
-      "id": 802,
-      "main": "Sunny",
-      "description": "scattered clouds",
-      "icon": "03n"
-    }
-  ],
-  "base": "stations",
-  "main": {
-    "temp": 280.71,
-    "feels_like": 277.32,
-    "temp_min": 279.15,
-    "temp_max": 283.71,
-    "pressure": 1021,
-    "humidity": 81
-  },
-  "wind": { "speed": 3.1, "deg": 240 },
-  "clouds": { "all": 40 },
-  "dt": 1576087793,
-  "sys": {
-    "type": 1,
-    "id": 6438,
-    "country": "ES",
-    "sunrise": 1576049618,
-    "sunset": 1576082177
-  },
-  "timezone": 3600,
-  "id": 3128026,
-  "name": "València",
-  "cod": 200
+    "coord": {
+        "lon": 39.47,
+        "lat": -0.33
+    },
+    "weather": [
+        {
+            "id": 802,
+            "main": "Sunny",
+            "description": "scattered clouds",
+            "icon": "03n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 280.71,
+        "feels_like": 277.32,
+        "temp_min": 279.15,
+        "temp_max": 283.71,
+        "pressure": 1021,
+        "humidity": 81
+    },
+    "wind": {
+        "speed": 3.1,
+        "deg": 240
+    },
+    "clouds": {
+        "all": 40
+    },
+    "dt": 1576087793,
+    "sys": {
+        "type": 1,
+        "id": 6438,
+        "country": "ES",
+        "sunrise": 1576049618,
+        "sunset": 1576082177
+    },
+    "timezone": 3600,
+    "id": 3128026,
+    "name": "València",
+    "cod": 200
 }
