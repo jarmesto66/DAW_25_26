@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Armesto's</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+  <header>
+    <nav>
+      <div class="menu">
+        <p class="logo">ARMESTO'S</p>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links">
+            <a class="" href="./index.html">Inicio</a>
+            <a class="" href="./galeria.html">Galería</a>
+            <a class="" href="./menu.html">Menú</a>
+            <a class="" href="./reservas.html">Reservas</a>
+            <a class="activa" href="./contacto.html">Contacto</a>
+            <a class="" href="./resenya.html">Reseñas</a>
+        </div>
+      </div>
+    </nav>
+    </header>
+    <br>
+    <section>
+        <h2>¿Tiene algún evento especial? ¿Una celebración? <br> ¡Pida consejo a nuestro equipo!</h2>
+        Si quiere contactar con nosotras, déjenos un mensaje:<br><br>
+        <form action="#" method="post">
+            <label for="name">Nombre:</label><br>
+            <input class="boton" type="text" id="name" name="name" size="50" required><br>
+            <label for="email">Correo electrónico:</label><br>
+            <input class="boton" type="email" id="email" name="email" size="50" required><br>
+            <label for="message">Díganos qué necesita:</label>
+            <br>
+            <textarea class="boton" id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            <input class="boton" type="submit" value="Enviar">             
+    </section>
+    <script>
+        // JavaScript para el menú hamburguesa
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenu.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

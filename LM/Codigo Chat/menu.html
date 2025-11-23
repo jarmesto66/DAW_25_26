@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Armesto's</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <p class="logo">ARMESTO'S</p>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="nav-links">
+                    <a class="" href="./index.html">Inicio</a>
+                    <a class="" href="./galeria.html">Galería</a>
+                    <a class="activa" href="./menu.html">Menú</a>
+                    <a class="" href="./reservas.html">Reservas</a>
+                    <a class="" href="./contacto.html">Contacto</a>
+                    <a class="" href="./resenya.html">Reseñas</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <h1>Nuestras especialidades</h1>
+        <section class="cuadricula-menu">
+            <div class="plato">
+                <img class="plato" src="./images/huevos.jpg" alt="">
+                <p>
+                    Prueba nuestros deliciosos huevos rotos con pastrami, una explosión de sabor que no te puedes perder.
+                </p>
+            </div>
+            <div class="plato">
+                <img src="./images/ensaladas.avif" alt="">
+                <p>
+                    Disfruta de nuestras frescas y variadas ensaladas, perfectas para una comida ligera y saludable.
+                </p>
+            </div>
+            <div class="platogrande">
+                <img class="" src="./images/burguer.avif" alt="">
+                <p>
+                    Deléitate con nuestras jugosas hamburguesas gourmet, hechas con ingredientes de primera calidad.
+                </p>
+            </div>
+            <div class="plato">
+                <img class="" src="./images/lentejas.avif" alt="">
+                <p>
+                    Saborea nuestras tradicionales lentejas caseras, preparadas con ingredientes frescos y mucho cariño.
+                </p>
+            </div>
+            <div class="plato">
+                <img class="" src="./images/fideua.avif" alt="">
+                <p>
+                    Prueba nuestra exquisita fideuá, un plato marinero lleno de sabor y tradición.
+                </p>
+            </div>
+        </section>
+    <script>
+        // JavaScript para el menú hamburguesa
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenu.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

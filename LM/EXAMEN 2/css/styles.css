@@ -433,103 +433,7 @@ summary {
   align-items: center;
 }
 
-/* ===== DISEÑO RESPONSIVE ===== */
-
-/* TABLETS: 901px a 600px */
-@media (max-width: 900px) {
-  .cuadricula-menu {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  }
-
-  .cuadricula-imagenes {
-    grid-template-columns: repeat(2,1fr); /* Dos columnas de igual tamaño */
-    grid-template-rows: repeat(3,1fr); /* Tres filas de igual tamaño */
-  }
-
-  .platogrande {
-    grid-row: span 1; /* el plato grande ocupa solo una fila */
-  }
-
-  .menu a { /* Ajuste del tamaño de fuente */
-    font-size: 0.8rem;
-  }
-
-  .menu-logo { /* Ajuste del tamaño del logo */
-    font-size: large;
-  }
-      .menu {
-        flex-wrap: wrap;
-        height: auto;
-        min-height: 60px;
-    }
-    
-    .menu-toggle {
-        display: flex;
-    }
-    
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: saddlebrown;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 80px;
-        transition: right 0.5s ease;
-        z-index: 9998;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    .nav-links.active {
-        right: 0;
-    }
-    
-    .nav-links a {
-        width: 100%;
-        padding: 15px 20px;
-        justify-content: flex-start;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-links a:last-child {
-        border-bottom: none;
-    }
-    
-    /* Animación del icono hamburguesa a X */
-    .menu-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .menu-toggle.active .bar:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    
-    .menu-toggle.active .bar:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-}
-
-/* MÓVILES: menos de 600px */
-@media (max-width: 600px) {
-  .cuadricula-menu {
-    grid-template-columns: 1fr; /* una columna apila vertical */
-  }
-  
-  .cuadricula-imagenes {
-    grid-template-columns: 1fr; /* Una columna de igual tamaño */
-    grid-template-rows: auto; /* Filas automáticas según contenido*/
-  }
-
-  .menu a {
-    font-size: 0.6rem; /* Se reduce el tamaño de fuente */
-  }
-
-  .menu-logo {
-    font-size: small; /* Se reduce el tamaño del logo */
-  }
-  /* Estilos para el menú smartphone*/
+/* Estilos para el menú smartphone*/
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -556,4 +460,136 @@ summary {
     align-items: stretch;
     margin-left: auto;
 }
+
+
+/* ===== DISEÑO RESPONSIVE ===== */
+
+/* TABLETS: 901px a 600px */
+@media (max-width: 900px) {
+  .cuadricula-menu {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+
+  .cuadricula-imagenes {
+    grid-template-columns: repeat(2,1fr); /* Dos columnas de igual tamaño */
+    grid-template-rows: repeat(3,1fr); /* Tres filas de igual tamaño */
+  }
+
+  .platogrande {
+    grid-row: span 1; /* el plato grande ocupa solo una fila */
+  }
+
+  .menu a { /* Ajuste del tamaño de fuente */
+    font-size: 0.8rem;
+  }
+
+  .menu-logo { /* Ajuste del tamaño del logo */
+    font-size: large;
+  }
+}
+
+/* MÓVILES: menos de 600px */
+@media (max-width: 600px) {
+  .cuadricula-menu {
+    grid-template-columns: 1fr; /* una columna apila vertical */
+  }
+  
+  .cuadricula-imagenes {
+    grid-template-columns: 1fr; /* Una columna de igual tamaño */
+    grid-template-rows: auto; /* Filas automáticas según contenido*/
+  }
+
+  .menu a {
+    font-size: 0.6rem; /* Se reduce el tamaño de fuente */
+  }
+
+  .menu-logo {
+    font-size: small; /* Se reduce el tamaño del logo */
+  }
+}
+
+/* ===== MENÚ HAMBURGUESA RESPONSIVE ===== */
+
+/* Icono hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: blanchedalmond;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20000; /* Por encima del menú */
+}
+
+/* Checkbox oculto */
+#menu-toggle {
+    display: none;
+}
+
+/* Enlaces normales en escritorio */
+.menu-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* ======================================================
+   RESPONSIVE: Tablet y móvil
+   ====================================================== */
+@media (max-width: 900px) {
+
+    /* Mostrar icono hamburguesa */
+    .hamburger {
+        display: block;
+    }
+
+    /* Ocultar menú horizontal */
+    .menu-links {
+        display: none;
+    }
+
+    /* Menú desplegable */
+    #menu-toggle:checked ~ .menu-links {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 60px; /* debajo de la barra */
+        
+        right: max(0px, env(safe-area-inset-right));
+        max-width: calc(100vw - 20px);
+
+        background-color: saddlebrown;
+        padding: 12px 0;
+        border-radius: 0 0 0 12px;
+        min-width: 180px;
+        box-shadow: -4px 4px 10px rgba(0,0,0,0.4);
+        z-index: 15000;
+    }
+
+    /* Enlaces dentro del desplegable */
+    .menu-links a {
+        padding: 12px 20px;
+        text-align: right;
+        white-space: nowrap;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    /* Impedir que la barra recorte elementos */
+    .menu {
+        overflow: visible !important;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 600px) {
+    .menu-links a {
+        font-size: 0.9rem;
+    }
+
+    .menu-logo {
+        font-size: 1.1rem;
+        padding-left: 10px;
+    }
 }
