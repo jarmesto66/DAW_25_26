@@ -5,32 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
   <title>Reseñas - Armesto's</title>
-  <style>
-    /*body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #fafafa;
-      padding: 0;
-    }*/
-    /*header {
-      background: #c0392b;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 0;
-    }*/
-  </style>
 </head>
 <body>
   <header>
     <nav>
-      <div class="menu">
-        <p class="logo">ARMESTO'S</p>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <div class="nav-links">
+        <div class="menu">
+            <p class="menu-logo">ARMESTO'S</p>
             <a class="" href="./index.html">Inicio</a>
             <a class="" href="./galeria.html">Galería</a>
             <a class="" href="./menu.html">Menú</a>
@@ -38,42 +18,39 @@
             <a class="" href="./contacto.html">Contacto</a>
             <a class="activa" href="./resenya.html">Reseñas</a>
         </div>
-      </div>
     </nav>
   </header>
   
     <section>
-      <br><h1>Restaurante Armesto's</h1>
-      <p>¡Déjanos tu opinión!</p>
-      <div class="container">
+      <br><h1>¡Déjanos tu opinión!</h1>
+      <div class="contenedor-formulario">
         <h2 class="encabezah2">Deja tu reseña</h2><br>
-        <form class="resenyaform">
+        <form class="resenyaform" action="#" method="post">
           <input type="text" placeholder="Tu nombre" required>
           <textarea placeholder="Escribe tu reseña..." required></textarea>
-          <button type="submit">Enviar reseña</button>
+          <input class="boton" type="submit" value="Enviar reseña">
         </form>
-        <div class="reseñas">
+        <div class="resenyas">
           <h3>Reseñas recientes</h3><br>
-          <div class="reseña">
+          <div class="resenya">
             <p><strong>Ana:</strong><br>¡Excelente comida y ambiente!</p>
           </div>
-          <div class="reseña">
+          <div class="resenya">
             <p><strong>Pedro:</strong><br>El servicio fue rápido y amable. Disfrutamos mucho de todos los platos y lo mejor fueron las torrijas y los cremaets al final.</p>
           </div>
         </div>
       </div>
+      <br><br><br>
     </section>
-    <script>
-        // JavaScript para el menú hamburguesa
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navLinks = document.querySelector('.nav-links');
-            
-            mobileMenu.addEventListener('click', function() {
-                mobileMenu.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-        });
-    </script>
+    <footer>
+        <div class="footer">
+            <p>© 2024 Restaurante Armesto's. Todos los derechos reservados.</p>
+            <div class="redes">
+                <a href="https://www.facebook.com/" target="_blank"><img width="25px" src="./images/facebook.png" alt="Red social Facebook"></a>
+                <a href="https://www.instagram.com/"><img width="25px" src="./images/instagram.png" alt="Red social Instagram"></a>
+                <a href="https://x.com/"><img width="25px" src="./images/twitter.jpeg" alt="Red social X"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
