@@ -23,7 +23,7 @@ article {
 
 /* Margen superior para compensar el menú fijo y evitar que lo cubra */
 nav {
-    margin-top: 60px; /* Altura del menú fijo*/
+    margin-top: 4vw;
 }
 
 /* Pie de página fijo en la parte inferior de la pantalla */
@@ -31,7 +31,7 @@ footer {
     background-color: saddlebrown;
     color: blanchedalmond;
     text-align: center;
-    padding: 10px 0;
+    padding: 0.1vw 0;
     position: fixed; /* Siempre visible en la parte inferior */
     bottom: 0;
     width: 100%;
@@ -87,7 +87,12 @@ form {
 
 footer p {
   font-size: 1.5vw;
-  margin: 0px 0px 5px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+footer img {
+  max-width: 1.3vw;
+  width: 25px;
 }
 
 summary {
@@ -126,7 +131,7 @@ summary {
     align-items: stretch;
     opacity: 0.8;
     background-color: saddlebrown;
-    height: 5vw; /* ALTURA FIJA - importante para los márgenes */
+    height: 3.5vw;
     margin: auto;
     position: fixed; /* Fijo en la parte superior */
     top: 0;
